@@ -1,0 +1,341 @@
+'''
+0. Positive anything is better than negative nothing
+This program will assign a random signed number to the variable
+number each time it is executed. Complete the source code in order
+to print whether the number stored in the variable number is
+positive or negative.
+The variable number will store a different value every time you
+ will run this program
+The output of the program should be:
+The number, followed by
+if the number is greater than 0: is positive
+if the number is 0: is zero
+if the number is less than 0: is negative
+followed by a new line
+'''
+import random
+
+number = random.randrange(-10, 10)
+print("Task 0 answer")
+if (number > 0):
+    print("{} is positive".format(number))
+elif (number < 0):
+    print("{} is negative".format(number))
+else:
+    print("{} is zero".format(number))
+'''
+1. The last digit
+This program will assign a random signed number to the variable 
+number each time it is executed. Complete the source code in order 
+to print the last digit of the number stored in the variable number.
+The output of the program should be:
+The string Last digit of, followed by
+the number, followed by
+the string is, followed by the last digit of number, followed by
+if the last digit is greater than 5: the string and is greater than 5
+if the last digit is 0: the string and is 0
+if the last digit is less than 6 and not 0: the string and is less than 6 
+and not 0, followed by a new line
+'''
+print("\nTask 1 answer")
+import random
+
+number = random.randrange(-10000, 10000)
+rem = abs(number) % 10
+if (rem > 5):
+    print("Last digit of {} is {} and is greater than 5".format(number, rem))
+elif (rem == 0):
+    print("Last digit of {} is 0".format(number))
+else:
+    print("Last digit of {} is {} and is less than 6 and not 0".format(number, rem))
+'''
+2. I sometimes suffer from insomnia. And when I can't fall asleep, 
+I play what I call the alphabet game
+Write a program that prints the ASCII alphabet, in lowercase, not 
+followed by a new line.
+You can only use one print function with string format
+You can only use one loop in your code
+You are not allowed to store characters in a variable
+You are not allowed to import any module
+'''
+print("\nTask 2 answer")
+i = 97
+for j in range(26):
+    print(chr(i), end=" ")
+    i += 1
+print()
+'''
+3. When I was having that alphabet soup, I never thought 
+that it would pay off
+Write a program that prints the ASCII alphabet, in lowercase, 
+not followed by a new line.
+Print all the letters except q and e
+You can only use one print function with string format
+You can only use one loop in your code
+You are not allowed to store characters in a variable
+You are not allowed to import any module
+'''
+print("\nTask 3 answer")
+i = 97
+j = 0
+while j < 24:
+    if (i != 101) and (i != 113):
+        print(chr(i), end=" ")
+        i += 1
+        j += 1
+    else:
+        i += 1
+        continue
+'''
+4. Hexadecimal printing
+Write a program that prints all numbers from 0 to 98 in 
+decimal and in hexadecimal (as in the following example)
+You can only use one print function with string format
+You can only use one loop in your code
+You are not allowed to store numbers or strings in a variable
+You are not allowed to import any module
+'''
+print("\n\nTask 4 answer")
+for i in range(99):
+    print("{} = {}".format(i, hex(i)), end=", ")
+'''
+5. 00...99
+Write a program that prints numbers from 0 to 99.
+Numbers must be separated by ,, followed by a space
+Numbers should be printed in ascending order, with two digits
+The last number should be followed by a new line
+You can only use no more than 2 print functions with string format
+You can only use one loop in your code
+You are not allowed to store numbers or strings in a variable
+You are not allowed to import any module
+'''
+print("\n\nTask 5 answer")
+for i in range(99):
+    print(i, end=", ")
+print()
+'''
+6. Inventing is a combination of brains and materials. The more brains
+ you use, the less material you need
+Write a program that prints all possible different combinations of two digits.
+Numbers must be separated by ,, followed by a space
+The two digits must be different
+01 and 10 are considered the same combination of the two digits 0 and 1
+Print only the smallest combination of two digits
+Numbers should be printed in ascending order, with two digits
+The last number should be followed by a new line
+You can only use no more than 3 print functions with string format
+You can only use no more than 2 loops in your code
+You are not allowed to store numbers or strings in a variable
+You are not allowed to import any module
+'''
+print("\nTask 6 answer")
+for i in range(0, 8):
+    for j in range(i + 1, 10):
+        print("{}{}".format(i, j), end=', ')
+print("{}{}".format(i + 1, j))
+'''
+7. islower
+Write a function that checks for lowercase character.
+Prototype: def islower(c):
+Returns True if c is lowercase
+Returns False otherwise
+You are not allowed to import any module
+You are not allowed to use str.upper() and str.isupper()
+Tips: ord()
+You don’t need to understand __import__
+'''
+
+
+def islower(c):
+    if (c >= 'a') and (c <= 'z'):
+        print("{} is a lower case".format(c))
+        return "True"
+    else:
+        print("{} is not a lower case".format(c))
+        return "False"
+
+
+'''
+8. To uppercase
+Write a function that prints a string in uppercase followed by a new line.
+Prototype: def uppercase(str):
+You can only use no more than 2 print functions with string format
+You can only use one loop in your code
+You are not allowed to import any module
+You are not allowed to use str.upper() and str.isupper()
+Tips: ord()
+You don’t need to understand __import__
+'''
+
+
+def uppercase(str):
+    for char in str:
+        if (char >= 'a') and (char <= 'z'):
+            x = chr(ord(char) - 32)
+            print(x, end="")
+        else:
+            print(char, end="")
+    print()
+    return str
+
+
+'''
+9. There are only 3 colors, 10 digits, and 7 notes; it's what we 
+do with them that's important.
+Write a function that prints the last digit of a number.
+Prototype: def print_last_digit(number):
+Returns the value of the last digit
+You are not allowed to import any module
+You don’t need to understand __import__
+'''
+
+
+def print_last_digit(number):
+    rem = abs(number) % 10
+    print(rem)
+
+
+'''
+10. a + b
+Write a function that adds two integers and returns the result.
+Prototype: def add(a, b):
+Returns the value of a + b
+You are not allowed to import any module
+You don’t need to understand __import__
+'''
+
+
+def add(a, b):
+    return a + b
+
+
+'''
+11. a ^ b
+Write a function that computes a to the power of b and return the value.
+Prototype: def pow(a, b):
+Returns the value of a ^ b
+You are not allowed to import any module
+You don’t need to understand __import__
+'''
+
+
+def pow(a, b):
+    return a ** b
+
+
+'''
+12. Fizz Buzz
+Write a function that prints the numbers from 1 to 100 separated by a space.
+For multiples of three print Fizz instead of the number 
+and for multiples of five print Buzz.
+For numbers which are multiples of both three and five print FizzBuzz.
+Prototype: def fizzbuzz():
+Each element should be followed by a space
+You are not allowed to import any module
+You don’t need to understand __import__
+'''
+
+
+def fizzbuzz():
+    for i in range(1, 101):
+        if (i % 3 == 0) and (i % 5 == 0):
+            print("FizzBuzz", end=", ")
+            i += 1
+            continue
+        if (i % 3 == 0):
+            print("Fizz", end=", ")
+            i += 1
+            continue
+        if (i % 5 == 0):
+            print("Buzz", end=", ")
+            i += 1
+            continue
+        else:
+            print(i, end=", ")
+
+
+'''
+14. Smile in the mirror
+#advanced
+Score: 100.0% (Checks completed: 100.0%)
+Write a program that prints the ASCII alphabet, in 
+reverse order, alternating lowercase and uppercase 
+(z in lowercase and Y in uppercase), 
+not followed by a new line.
+You can only use one print function with string format
+You can only use one loop in your code
+You are not allowed to store characters in a variable
+You are not allowed to import any module
+'''
+
+
+def ascii():
+    i = 122
+    for j in range(26):
+        if (i % 2 == 0):
+            print(chr(i), end=" ")
+            i -= 1
+        else:
+            i -= 32
+            print(chr(i), end=" ")
+            i += 31
+            continue
+
+
+'''
+15. Remove at position
+Write a function that creates a copy of 
+the string, removing the character at the 
+position n (not the Python way, the “C array index”).
+Prototype: def remove_char_at(str, n):
+You are not allowed to import any module
+You don’t need to understand __import__
+'''
+
+
+def remove_char_at(str, n):
+    if (str == 0) or (n == 0):
+        return "NULL"
+    str1 = ""
+    str1 = str1 + str
+    c = 0
+    for c in range(len(str1)):
+        if (c == n):
+            c += 1
+            continue
+        print("{}".format(str1[c]), end="")
+
+
+# Main Function
+def main():
+    alph = 'F'
+    print("\nTask 7 answer")
+    islower(alph)
+
+    print("\nTask 8 answer")
+    str = "War between the Gods, Titans and Humans"
+    uppercase(str)
+
+    print("\nTask 9 answer")
+    number = 98758099779
+    print_last_digit(number)
+
+    print("\nTask 10 answer")
+    a = 60
+    b = 99
+    print("{} + {} = {}".format(a, b, add(a, b)))
+
+    print("\nTask 11 answer")
+    print("{} to the power of {} = {}".format(a, b, pow(a, b)))
+
+    print("\nTask 12 answer")
+    fizzbuzz()
+
+    print("\n\nTask 14 answer")
+    ascii()
+
+    print("\n\nTask 15 answer")
+    str = "Hansel and Gretel the great Witch-hunters"
+    remove_char_at(str, 8)
+
+main()

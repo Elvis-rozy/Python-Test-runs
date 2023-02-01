@@ -1,0 +1,97 @@
+'''
+2. Hello, print
+mandatory
+Score: 100.0% (Checks completed: 100.0%)
+Write a Python script that prints exactly "Programming is
+like building a multilingual puzzle, followed by a new line.
+'''
+print("Task 2 answer")
+print('"Programming is like building a multilingual puzzle"')
+
+'''
+3. Print integer
+mandatory
+Score: 100.0% (Checks completed: 100.0%)
+Complete this source code in order to print the integer 
+stored in the variable number, followed by Battery street, 
+followed by a new line.
+'''
+print("\nTask 3 answer")
+number = 98
+print("{} Battery street".format(number))
+'''
+4. Print float
+mandatory
+Score: 100.0% (Checks completed: 100.0%)
+Complete the source code in order to print the float stored 
+in the variable number with a precision of 2 digits.
+'''
+print("\nTask 4 answer")
+number = 98.20897
+print("{:.2f} ".format(number))
+'''
+5. Print string
+mandatory
+Score: 100.0% (Checks completed: 100.0%)
+Complete this source code in order to print 3 times a string 
+stored in the variable str, followed by its first 9 characters.
+'''
+print("\nTask 5 answer")
+str = "Print me three times"
+print(str * 3)
+print()
+print(str[:9])
+print()
+'''
+6. Play with strings
+mandatory
+Score: 100.0% (Checks completed: 100.0%)
+Complete this source code to print Welcome to Holberton School!
+'''
+print("Task 6 answer")
+str1 = "Holberton"
+str2 = "School"
+print("Welcome to {} {}".format(str1, str2))
+'''
+7. Copy - Cut - Paste
+mandatory
+Score: 100.0% (Checks completed: 100.0%)
+Complete this source code
+'''
+word = "Holberton"
+print("\nTask 7 answer")
+print(word[:3])
+print(word[:-2])
+print(word[1:-1])
+'''
+8. Create a new sentence
+mandatory
+Score: 100.0% (Checks completed: 100.0%)
+Complete this source code to print object-oriented programming 
+with Python, followed by a new line
+'''
+str = "Python is an interpreted, interactive, object-oriented "\
+      "programming language that combines remarkable power "\
+      "with very clear syntax"
+print("\nTask 8 answer")
+print(str[39:-63])
+'''
+9. Easter Egg
+mandatory
+Score: 100.0% (Checks completed: 100.0%)
+Write a Python script that prints “The Zen of Python”, by 
+TimPeters, followed by a new line.
+'''
+print("\nTask 9 answer")
+import this
+'''
+11. Hello, write
+#advanced
+Score: 100.0% (Checks completed: 100.0%)
+Write a Python script that prints exactly and that piece of 
+art is useful - Dora Korpar, 2015-10-19, followed by a new line.
+'''
+print("\nTask 10 answer")
+import sys
+sys.stderr.write("and that piece of art is useful - Dora Korpar, 2015-10-19")
+sys.exit(1)
